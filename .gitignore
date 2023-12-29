@@ -1,0 +1,6 @@
+чатик
+/node_modules
+.env
+/dist
+/build
+/database.sql
