@@ -7,5 +7,5 @@ export const databaseConfig : Pool = new Pool({
     password : process.env.DB_PASSWORD || 'admin',
     host : process.env.DB_HOST || 'localhost',
     port : parseInt(process.env.DB_PORT || '5432'),
-    database : process.env.DATABASE || 'test'
+    database : process.env.DATABASE || 'm-gen'
 });

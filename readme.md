@@ -22,3 +22,5 @@
   -laboratory(fk, ref to labarotry_id)
   -clinic(fk, ref to clinic_id)
   2)и нужно напиши запросы для заполнения всех таблиц моковыми данными
+
+это просто таблички
