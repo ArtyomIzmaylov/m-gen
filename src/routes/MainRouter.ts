@@ -65,10 +65,16 @@ mainRouter.get('/', (req, res) => {
         <button onclick="getData('api/getTests')">Получить тесты</button>
         <pre id="result"></pre>
         <script>
-          async function getData(endpoint) {
+          import {rejects} from "assert"; 
+async function getData(endpoint) {
             try {
               const response = await fetch(\`/\${endpoint}\`);
               const data = await response.json();
+              await new Promise((resolve) => {
+                    setTimeout(() => {
+                    resolve()
+                    }, 1000)
+              })
               document.getElementById('result').innerHTML = formatData(data);
             } catch (error) {
               console.error('Error fetching data:', error);

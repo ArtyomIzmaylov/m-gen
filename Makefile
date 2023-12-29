@@ -18,12 +18,8 @@ restart:
 	make down && make up
 
 deploy:
-	#kubectl delete pod "migration"
 	kubectl apply -f ./deployment/postgres-deployment.yaml
-	kubectl apply -f ./deployment/app-deployment.yaml
-	#kubectl apply -f ./deployment/migrations-deployment.yaml
-
-
+	kubectl apply -f ./deployment/m-gen-deployment.yaml
 secrets:
 	kubectl create secret docker-registry registry-secret \
       --docker-server=${REGISTRY_URL} \
