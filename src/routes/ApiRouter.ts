@@ -18,7 +18,6 @@ apiRouter.get('/getClinics', async (req, res) => {
 apiRouter.get('/getMLaboratories', async (req, res) => {
     try {
         const result = await databaseInstance.query('SELECT * FROM laboratories');
-        console.log(result)
         res.json(result.rows);
     } catch (error) {
         console.error(error);
